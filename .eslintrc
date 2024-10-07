@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort",
+    "sort-destructure-keys",
+    "sort-keys-fix",
+    "import"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": "off",
+    "no-case-declarations": "off",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^@?\\w"],
+          ["^@?\\w*(@iex-xyz)"],
+          ["^\\.", "^[^.]"]
+        ]
+      }
+    ],
+    "sort-keys": ["error", "asc", { "caseSensitive": true, "minKeys": 2, "natural": false }],
+    "sort-keys-fix/sort-keys-fix": "warn"
+  },
+  "root": true
+}

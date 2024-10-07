@@ -1,0 +1,23 @@
+{
+  "compilerOptions": { 
+    "target": "ES2020",     
+    "lib": ["ES2020"],
+    "types": ["node", "jest"],  
+    "module": "commonjs",                                 /* Specify the root folder within your source files. */
+    "moduleResolution": "node",                 /* Allow 'import x from y' when a module doesn't have a default export. */
+    "esModuleInterop": true,  
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "declaration": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "strictPropertyInitialization": false,
+    "useUnknownInCatchVariables": false
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

@@ -1,0 +1,19 @@
+version: '3.8'
+services: 
+  postgres:  
+    container_name: parcl-postgres
+    restart: always
+    image: "postgres:alpine"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+
+  redis:
+    container_name: parcl-redis
+    restart: always
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
